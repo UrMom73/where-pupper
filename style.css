@@ -1,0 +1,239 @@
+:root {
+    --ff-header: 'Barriecito', serif;
+    --ff-p: 'Space Mono', monospace;
+    --player-clr: rgb(218, 218, 97);
+    --hilite-clr: rgb(97, 194, 218);
+    font-size: 62.5%;
+}
+
+/* structure */
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    background-image: url(images/mystery-image.png);
+    background-size: cover;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+/* --  */
+
+/* typography */
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 9rem;
+    font-family: var(--ff-header);
+    color: white;
+}
+
+h2 {
+    font-size: 5rem;
+    font-family: var(--ff-header);
+    color: white;
+}
+
+p {
+    font-size: 2rem;
+    font-family: var(--ff-p);
+    line-height: 2;
+    color: white;
+}
+
+header p {
+    font-size: 3rem;
+    font-family: var(--ff-p);
+}
+
+ul {
+    color: white;
+    font-family: var(--ff-p);
+    font-size: 2rem;
+}
+
+a {
+    color: var(--player-clr);
+    transition: 250ms;
+}
+
+a:hover {
+    color: rgb(241, 241, 103);
+}
+
+/* --  */
+
+/* button styling */
+section#buttons {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+section#buttons button {
+    color: black;
+    font-family: var(--ff-p);
+    font-size: 1.5rem;
+    padding: 0.5em 2em;
+}
+
+section#buttons button:first-of-type {
+    background-color: rgb(20, 105, 161);
+    border: 3px solid rgb(10, 59, 104);
+    border-radius: 5px;
+    transition: 250ms;
+}
+
+section#buttons button:first-of-type:hover {
+    background-color:rgb(38, 122, 179);
+}
+
+section#buttons button:nth-of-type(2) {
+    background-color: green;
+    border: 3px solid rgb(8, 88, 8);
+    border-radius: 5px;
+    transition: 250ms;
+}
+
+section#buttons button:nth-of-type(2):hover {
+    background-color: rgb(16, 146, 16);
+}
+
+section#buttons button:last-of-type {
+    background-color: brown;
+    border: 3px solid rgb(124, 31, 31);
+    border-radius: 5px;
+    transition: 250ms;
+}
+
+section#buttons button:last-of-type:hover {
+    background-color: rgb(187, 51, 51);
+}
+
+button:hover {
+    cursor: pointer;
+}
+/* --  */
+
+/* menu popup styling */
+.popupWindow {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    margin: 2.5rem;
+    padding: 2.5rem;
+    width: 80%;
+    height: 70%;
+    display: none;
+    z-index: auto;
+    background-color: rgb(26, 25, 31);
+    border: 3px solid black;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+.popupWindow button {
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    transition: 250ms;
+    width: 5%;
+    height: 5%;
+}
+
+.popupWindow button:hover {
+    color: rgb(239, 19, 19);
+    background-color: rgb(55, 52, 52);
+}
+
+.popupWindow div {
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+#helpImage {
+    width: 320px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+label {
+    font-size: 2rem;
+    font-family: var(--ff-p);
+    margin-bottom: 4rem;
+}
+
+select {
+    font-size: 1.5rem;
+    font-family: var(--ff-p);
+    border-radius: 5px;
+}
+/* --  */
+
+@keyframes menuFadeOut {
+    to {
+        background-image: none;
+        opacity: 0;
+    }
+}
+
+#gameText {
+    width: 50%;
+    color: white;
+}
+
+#gameText div {
+    margin: 1rem 0;
+}
+
+span {
+    line-height: 2;
+    color: white;
+    font-family: var(--ff-p);
+    opacity: 0;
+    font-size: 2rem;
+}
+
+span.typewriter {
+    opacity: 1;
+}
+
+span.playerResponse {
+    color: var(--player-clr);
+}
+
+span.highlighter, code {
+    color: var(--hilite-clr);
+}
+
+input[type='text'] {
+    width: 30ch;
+    color: var(--player-clr);
+    border: none;
+    background-color: black;
+    font-family: var(--ff-p);
+    font-size: 2rem;
+}
+
+input[type='text']:focus {
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: rgb(218, 218, 97, 0.6);
+}

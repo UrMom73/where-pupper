@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where's Pupper?</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="images/smiley.png">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <h1>Where's Pupper?!</h1>
+            <p>A Text Adventure By Raju Praju</p>
+        </header>
+
+        <section id="buttons">
+            <button id="help" onclick="openWindow('helpWindow'); buttonClick();">Help</button>
+            <button id="play" onclick="transitionMenu(); buttonClick();">Play</button>
+            <button id="settings" onclick="openWindow('settingsWindow'); buttonClick();">Settings</button>
+        </section>
+
+        <div id="helpWindow" class="popupWindow">
+            <button onclick="exitWindow('helpWindow');">&Chi;</button>
+            <h2>How to Play</h2>
+            <div>
+                <p>Pupper, your dog, your <em>life</em>, has gone missing and you must find him <em>at all costs</em>! To do so, <code>search</code> areas, find and <code>collect</code> tools, <code>inspect</code> objects for clues, and <code>investigate</code> people! But be wary, there'll be some dangers on your journey! If you ever need help, just ask.</p>
+                <img id="helpImage" src="images/minecraft-sun.png" alt="minecraft sun">
+            </div>
+            <p>P.S. if your taste is not good enough for this music >:P, you can turn it off using <code>mute</code>. To turn it back on, use <code>unmute</code>.</p>
+        </div>
+
+        <div id="settingsWindow" class="popupWindow">
+            <button onclick="exitWindow('settingsWindow');">&Chi;</button>
+            <h2>Settings</h2>
+            <div>
+                <label>Music
+                    <select id="musicSelect">
+                        <option value="on">On</option>
+                        <option value="off">Off</option>
+                    </select>
+                </label>
+            </div>
+
+            <div>
+                <label>Sfx
+                    <select id="sfxSelect">
+                        <option value="on">On</option>
+                        <option value="off">Off</option>
+                    </select>
+                </label>
+            </div>
+
+            <h2>Credits</h2>
+            <ul>
+                <li><a href="https://www.fesliyanstudios.com/royalty-free-music/download/shady-business/2181" target="_blank">Music</a> - Shady Business by David Renda</li>
+                <li><a href="https://freesound.org/people/imagery2/sounds/456906/" target="_blank">Typing Sound</a> - Kaybren Reckland</li>
+                <li><a href="https://freesound.org/people/crazymonke9/sounds/418105/" target="_blank">Bark Button Sound</a> - <a href="https://www.youtube.com/c/crazymonkeymusic" target="_blank">crazymonke9</a></li>
+                <li><a href="https://freesound.org/people/maljwilliams/sounds/565848/" target="_blank">Howl Sound</a> - maljwilliams</li>
+                <li><a href="https://djlunatique.com/iphone-alarm-radar-sound-effect/" target="_blank">Alarm Sound</a> - DJ Lunatique</li>
+            </ul>
+
+            <button onclick="audioFunction(); exitWindow('settingsWindow');">Save</button>
+        </div> 
+    </main>
+   
+    <section id="music">
+        <audio id="bg-music" src="audio/shady-business.mp3" autoplay loop></audio>
+    </section>
+
+    <section id="sfx">
+        <audio id="howl" src="audio/wolf.wav"></audio>
+        <audio id="buttonBeep" src="audio/bark-sound.wav"></audio>
+        <audio id="typingSound" src="audio/typewriter.wav" loop></audio>
+        <audio id="alarm" src="audio/alarm.mp3"></audio>
+    </section>
+
+</body>
+
+</html>
