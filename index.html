@@ -61,6 +61,12 @@
                 </label>
             </div>
 
+            <div>
+                <label>Type Speed (the lower the faster)
+                    <input type="number" min="20" max="80" value="40" id="typeSpeed">
+                </label>
+            </div>
+
             <h2>Credits</h2>
             <ul>
                 <li><a href="https://www.fesliyanstudios.com/royalty-free-music/download/shady-business/2181" target="_blank">Music</a> - Shady Business by David Renda</li>
@@ -70,7 +76,7 @@
                 <li><a href="https://djlunatique.com/iphone-alarm-radar-sound-effect/" target="_blank">Alarm Sound</a> - DJ Lunatique</li>
             </ul>
 
-            <button onclick="audioFunction(); exitWindow('settingsWindow');">Save</button>
+            <button onclick="settings(); exitWindow('settingsWindow');">Save</button>
         </div> 
     </main>
    
