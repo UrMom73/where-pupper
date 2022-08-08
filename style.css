@@ -128,15 +128,11 @@ button:hover {
 
 /* menu popup styling */
 .popupWindow {
-    position: fixed;
-    display: none;
     flex-direction: column;
-    margin: 2.5rem;
+    margin: 2.5rem auto;
     padding: 2.5rem;
     width: 80%;
     height: 70%;
-    display: none;
-    z-index: auto;
     background-color: rgb(26, 25, 31);
     border: 3px solid black;
     border-radius: 5px;
