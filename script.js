@@ -181,15 +181,6 @@ const map = {
     //consider keeping some places a secret
 };
 
-//menu popup functions
-function openWindow(windowName) {
-    document.getElementById(windowName).style.display = 'flex';
-};
-
-function exitWindow(windowName) {
-    document.getElementById(windowName).style.display = 'none';
-};
-
 //settings
 function settings() {
     let musicFiles = document.getElementById('music').children;
@@ -477,9 +468,9 @@ function ask(person) {
 //inspect function, player inspects objects for clues if nearby
 function inspect(object) {
     textGenerator('Still in development!');
-}
+};
 
 //use function, player uses objects in inventory
 function use(object) {
     textGenerator('Still in development!');
-}
+};
