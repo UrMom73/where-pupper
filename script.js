@@ -203,13 +203,13 @@ function settings() {
     };
     //for type speed
     if (!userSpeed.value) {
-        userSpeed.value = 40;
+        userSpeed.value = typeSpeed;
 
-    }else if(userSpeed.value < userSpeed.getAttribute('min')) {
+    }else if(parseInt(userSpeed.value) < parseInt(userSpeed.getAttribute('min'))) {
         userSpeed.value = userSpeed.getAttribute('min');
         typeSpeed = parseInt(userSpeed.getAttribute('min'));
 
-    }else if(userSpeed.value > userSpeed.getAttribute('max')) {
+    }else if(parseInt(userSpeed.value) > parseInt(userSpeed.getAttribute('max'))) {
         userSpeed.value = userSpeed.getAttribute('max');
         typeSpeed = parseInt(userSpeed.getAttribute('max'));
 
@@ -327,7 +327,7 @@ function onTick() {
 };
 
 //skip typewriter effect
-gameText.addEventListener('dblclick', function() {
+gameText.addEventListener('dblclick', () => {
     if(gameText.lastElementChild.tagName === 'INPUT' || gameText.lastElementChild.tagName === 'SPAN') {
         return;
     };
@@ -354,8 +354,8 @@ function inputGenerator() {
     input.setAttribute('maxlength', '30');
     input.focus();
 
-    input.addEventListener('keydown', function (key) {
-        if (key.keyCode === 13) {
+    input.addEventListener('keydown', e => {
+        if (e.key === 'Enter') {
             masterFunction(input.value);
         };
     });
